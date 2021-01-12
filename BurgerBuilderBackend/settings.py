@@ -61,6 +61,9 @@ MIDDLEWARE = [
 # for django-cors-headers package
 CORS_ALLOW_ALL_ORIGINS = True
 
+# For Customized User Model:
+AUTH_USER_MODEL = 'BurgerAPI.UserProfile'
+
 ROOT_URLCONF = 'BurgerBuilderBackend.urls'
 
 TEMPLATES = [
