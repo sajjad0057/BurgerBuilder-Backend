@@ -37,9 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # djangoRESTframework
+    'rest_framework',
+    # App
+    'BurgerAPI',
+    # for django-cors-headers package
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
+    # for django-cors-headers package
+    'corsheaders.middleware.CorsMiddleware',
+    #for others packages 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -48,6 +57,9 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# for django-cors-headers package
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = 'BurgerBuilderBackend.urls'
 
