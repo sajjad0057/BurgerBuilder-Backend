@@ -49,7 +49,7 @@ class Ingredient(models.Model):
     meat = models.IntegerField(default=0)
     
     def __str__(self):
-        return self.salad + self.cheese + self.meat
+        return f'{self.salad + self.cheese + self.meat}'
     
 
 class CustomerDetail(models.Model):
@@ -74,7 +74,7 @@ class Order(models.Model):
     
     
     def __str__(self):
-        return self.user + "orders"
+        return  f'{self.user} orders'
     
     
     
