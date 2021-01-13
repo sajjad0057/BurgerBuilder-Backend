@@ -1,6 +1,6 @@
 from django.urls import path
 from rest_framework.routers import DefaultRouter
-from .views import UserProfileViewSet
+from .views import UserProfileViewSet,OrderViewSet
 # For Using djangorestframework-simplejwt package
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
@@ -10,7 +10,8 @@ from rest_framework_simplejwt.views import (
 
 
 router = DefaultRouter()
-router.register('user',UserProfileViewSet)
+router.register(r'user',UserProfileViewSet)
+router.register(r'order',OrderViewSet,basename="order")
 
 
 urlpatterns = [
