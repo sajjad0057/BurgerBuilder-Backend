@@ -5,9 +5,9 @@ from .models import UserProfile
 class UserProfileSerializer(ModelSerializer):
     class Meta:
         model = UserProfile
-        fields = ["id","email"]
+        fields = ["id","email","password"]
         
-        extra_kwarg = {
+        extra_kwargs = {
             "password": {
                 "write_only" : True,
                 "style" : {"input_type" : "password"},
@@ -20,4 +20,5 @@ class UserProfileSerializer(ModelSerializer):
             email = validated_data["email"],
             password=validated_data["password"]
         )
+        return user
         

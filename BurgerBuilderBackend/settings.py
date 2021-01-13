@@ -64,6 +64,19 @@ CORS_ALLOW_ALL_ORIGINS = True
 # For Customized User Model:
 AUTH_USER_MODEL = 'BurgerAPI.UserProfile'
 
+# For Using djangorestframework-simplejwt package
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    )
+
+}
+
+
+
+
 ROOT_URLCONF = 'BurgerBuilderBackend.urls'
 
 TEMPLATES = [
