@@ -7,7 +7,7 @@ class UserProfileSerializer(ModelSerializer):
         model = UserProfile
         fields = ["id","email"]
         
-        extra_kwarg = {
+        extra_kwargs = {
             "password": {
                 "write_only" : True,
                 "style" : {"input_type" : "password"},
